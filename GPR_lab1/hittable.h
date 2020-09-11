@@ -1,8 +1,17 @@
+//Author: Olivia Van Pelt
+//hittable.h: contains the struct and abstract parent for the hittable objects 
+//that will be added to the world
+
+//Sources:
+//  https://raytracing.github.io/books/RayTracingInOneWeekend.html
+
 #ifndef HITTABLE_H
 #define HITTABLE_H
 
 #include "ray.h"
 
+
+//struct used to determine what/how things are hit by vectors
 struct hit_record {
     point3 p;
     vec3 normal;

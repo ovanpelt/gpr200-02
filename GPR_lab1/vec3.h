@@ -1,3 +1,10 @@
+//Author:Olivia Van Pelt
+//vec3.h: class that makes 3 dimentional vectors
+//and allows them to easily manipulated in the code
+
+//Sources:
+//  https://raytracing.github.io/books/RayTracingInOneWeekend.html
+
 #ifndef VEC3_H
 #define VEC3_H
 
@@ -6,6 +13,7 @@
 
 using std::sqrt;
 
+//the general class that allows us to use 3 slot vectors and apply operations and tasks to them
 class vec3 {
 public:
     vec3() : e{ 0,0,0 } {}

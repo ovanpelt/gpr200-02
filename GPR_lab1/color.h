@@ -1,3 +1,9 @@
+//Author: Olivia Van Pelt
+//color.h: writes out the color of a pixel to the console if
+// a .ppm file is not available
+
+//Sources:
+//  https://raytracing.github.io/books/RayTracingInOneWeekend.html
 
 #ifndef COLOR_H
 #define COLOR_H

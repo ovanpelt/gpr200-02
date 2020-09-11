@@ -1,3 +1,11 @@
+//Author: Olivia Van Pelt
+//GPR_lab1.h: contains constants commant headers, usings
+// and utility functions to keep the main code more consise
+
+
+//Sources:
+//  https://raytracing.github.io/books/RayTracingInOneWeekend.html
+
 #ifndef GPR_LAB1_H
 #define GPR_LAB1_H
 

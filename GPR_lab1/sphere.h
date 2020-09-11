@@ -1,9 +1,17 @@
+//Author: Olivia Van Pelt
+//sphere.h: class that contains the sphere object that will 
+//be placed at the center of our world
+
+//Sources:
+//  https://raytracing.github.io/books/RayTracingInOneWeekend.html
+
 #ifndef SPHERE_H
 #define SPHERE_H
 
 #include "hittable.h"
 #include "vec3.h"
 
+//child of hittable (a sphere is a hitable object)
 class sphere : public hittable {
 public:
     sphere() {}
@@ -17,6 +25,7 @@ public:
     double radius;
 };
 
+//how the program will determine if a sphere has been hit
 bool sphere::hit(const ray& r, double t_min, double t_max, hit_record& rec) const {
     vec3 oc = r.origin() - center;
     auto a = r.direction().length_squared();

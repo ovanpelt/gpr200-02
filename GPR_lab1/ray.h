@@ -1,8 +1,15 @@
+//Author: Olivia Van Pelt
+//ray.h: the class that allows vec3s acts as rays within the world
+
+//Sources:
+//  https://raytracing.github.io/books/RayTracingInOneWeekend.html
+
 #ifndef RAY_H
 #define RAY_H
 
 #include "vec3.h"
 
+//the 'light vectors' that make the scene have color and depth
 class ray {
 public:
     ray() {}

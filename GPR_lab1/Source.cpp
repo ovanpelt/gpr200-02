@@ -1,3 +1,6 @@
+//Author: Olivia Van Pelt
+//source.cpp: contains the main function of this code
+//and writes to a .ppm file an image of a sphere
 
 //Sources:
 //  https://raytracing.github.io/books/RayTracingInOneWeekend.html
@@ -10,6 +13,8 @@
 
 #include <fstream>
 #include <iostream>
+
+//returns the colored vector based on if it hit something within the world or not
 color ray_color(const ray& r, const hittable& world) {
     hit_record rec;
     if (world.hit(r, 0, infinity, rec)) {
@@ -52,7 +57,7 @@ int main() {
     ofs << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
     for (int j = image_height - 1; j >= 0; --j) {
-
+        //writes this to console
         cerr << "\rScanlines remaining: " << j << ' ' << flush;
         for (int i = 0; i < image_width; ++i) {
             double u = double(i) / (image_width - 1);

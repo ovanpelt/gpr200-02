@@ -1,3 +1,10 @@
+//Author: Olivia Van Pelt
+//hittable_list.h: contains the lsit of hitable objects
+//and a child of hittable that determines if objects have been hit
+
+//Sources:
+//  https://raytracing.github.io/books/RayTracingInOneWeekend.html
+
 #ifndef HITTABLE_LIST_H
 #define HITTABLE_LIST_H
 
@@ -9,6 +16,7 @@
 using std::shared_ptr;
 using std::make_shared;
 
+//controles what objects are hittable by rays beased on if they are on the list
 class hittable_list : public hittable {
 public:
     hittable_list() {}
@@ -24,6 +32,7 @@ public:
     std::vector<shared_ptr<hittable>> objects;
 };
 
+//determines if an object has been hit by a ray
 bool hittable_list::hit(const ray& r, double t_min, double t_max, hit_record& rec) const {
     hit_record temp_rec;
     bool hit_anything = false;
