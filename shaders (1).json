@@ -1,0 +1,37 @@
+{
+ "userName": "olivia_vanpelt",
+ "date": "2020-09-17T15:53:40.042Z",
+ "numShaders": 1,
+ "shaders": [
+  {
+   "ver": "0.1",
+   "info": {
+    "id": "WljfDG",
+    "date": "0",
+    "viewed": 0,
+    "name": "vanpeltlab2",
+    "description": "learning shaders",
+    "likes": 0,
+    "published": "Private",
+    "tags": [
+     "color"
+    ]
+   },
+   "renderpass": [
+    {
+     "inputs": [],
+     "outputs": [
+      {
+       "id": "4dfGRr",
+       "channel": 0
+      }
+     ],
+     "code": "//glsl graphics libraary shading language\n\n//using color= vec3;\n\n#define colorRGB vec3\n#define colorRGBA vec4\n\n//gradient\nvec4 myEffect0(in vec2 fragCoord, in vec2 resolution)\n{\n    //return vec4(1.0,0,0,0);\n    \n    vec2 uv= fragCoord / resolution;\n    vec3 color = colorRGB(uv, 0.25);\n    float alpha =1.0;\n    return colorRGBA(color, alpha);\n    \n    \n}\n\n//checkers\n/*vec4 myEffect1(in vec2 fragCoord, in vec2 resolution)\n{\n    vec3 color;\n    float alpha =1.0\n    return colorRGBA(color, alpha);   \n}\n\n//circle\nvec4 myEffect2(in vec2 fragCoord, in vec2 resolution)\n{\n    vec3 color;\n    float alpha =1.0\n    return colorRGBA(color, alpha);   \n}\n\n//color morph\nvec4 myEffect3(in vec2 fragCoord, in vec2 resolution)\n{\n    vec3 color;\n    float alpha =1.0\n    return colorRGBA(color, alpha);   \n}\n*/\n\nvoid mainImage( out vec4 fragColor, in vec2 fragCoord )\n{\n  \n    \n    // RGB A=[0,1]\n    //fragColor =vec4( 1.0, 1.0, 1.0, 1.0);\n    \n    fragColor=myEffect0(fragCoord, iResolution.xy);\n    //fragColor=myEffect1(fragCoord, iResolution.xy);\n    //fragColor=myEffect2(fragCoord, iResolution.xy);\n    //fragColor=myEffect3(fragCoord, iResolution.xy);\n    \n    \n    \n    // Normalized pixel coordinates (from 0 to 1)\n    //vec2 uv = fragCoord/iResolution.xy;\n\n    // Time varying pixel color\n    //vec3 col = 0.5 + 0.5*cos(iTime+uv.xyx+vec3(0,2,4));\n\n    // Output to screen\n    //fragColor = vec4(col,1.0);\n}",
+     "name": "Image",
+     "description": "",
+     "type": "image"
+    }
+   ]
+  }
+ ]
+}
